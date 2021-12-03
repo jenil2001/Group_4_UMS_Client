@@ -10,7 +10,7 @@ const setFaculty = (data) => {
     }
 }
 
-const url = "http://localhost:5000"
+const url = "https://university-management-server.herokuapp.com/"
 
 const fetchStudentsHelper = (data) => {
     return {

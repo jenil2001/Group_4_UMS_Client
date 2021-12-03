@@ -3,7 +3,7 @@ import setAuthToken from '../utils/setAuthToken'
 import jwt_decode from 'jwt-decode';
 import { SET_STUDENT, SET_ERRORS_HELPER, SET_ERRORS, STUDENT_UPDATE_PASSWORD, SET_OTP, SET_FLAG } from '../actionTypes'
 
-const url = "https://university-management-server.herokuapp.com/"
+const url = "https://university-management-server.herokuapp.com"
 
 const setStudent = (data) => {
     return {

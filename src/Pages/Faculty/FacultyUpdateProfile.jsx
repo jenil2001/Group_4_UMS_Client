@@ -13,25 +13,15 @@ const FacultyUpdateProfile = () => {
     const history = useHistory()
     const [gender, setGender] = useState('')
     const [facultyMobileNumber, setContactNumber] = useState('')
-   // const [aadharCard, setAadharCard] = useState('')
-    //const [avatar, setAvatar] = useState('')
     const [isLoading, setIsLoading] = useState(false)
-   // const imagehandler = (e) => {
-     //   if (e.target.files && e.target.files[0]) {
-       //     let img = e.target.files[0]
-         //   setAvatar(img)
-        //}
 
 
     const formHandler = async (e) => {
         e.preventDefault()
         const formData = new FormData()
 
-        //console.log(gender,facultyMobileNumber)
         formData.append("gender", gender)
         formData.append("facultyMobileNumber", facultyMobileNumber)
-       // formData.append("aadharCard", aadharCard)
-        //formData.append("avatar", avatar)
         formData.append("email", store.faculty.faculty.faculty.email)
         setIsLoading(true)
         dispatch(facultyUpdate(formData, history))

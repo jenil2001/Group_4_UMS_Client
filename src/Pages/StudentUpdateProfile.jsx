@@ -15,17 +15,9 @@ const StudentUpdateProfile = () => {
     const [studentMobileNumber, setContactNumber] = useState('')
     const [fatherName, setFatherName] = useState('')
     const [fatherMobileNumber, setFatherContactNumber] = useState('')
-    //const [aadharCard, setAadharCard] = useState('')
     const [error, setError] = useState({})
-  //  const [avatar, setAvatar] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const [modal, setModal] = useState(false)
-    // const imagehandler = (e) => {
-    //     if (e.target.files && e.target.files[0]) {
-    //         let img = e.target.files[0]
-    //         setAvatar(img)
-    //     }
-    // }
 
     useEffect(() => {
         if (store.error) {
@@ -40,8 +32,6 @@ const StudentUpdateProfile = () => {
         formData.append("studentMobileNumber", studentMobileNumber)
         formData.append("fatherName", fatherName)
         formData.append("fatherMobileNumber", fatherMobileNumber)
-    //    formData.append("aadharCard", aadharCard)
-      //  formData.append("avatar", avatar)
         formData.append("email", store.student.student.student.email)
         dispatch(studentUpdate(formData, history))
         setModal(true)
